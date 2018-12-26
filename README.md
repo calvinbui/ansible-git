@@ -9,22 +9,24 @@ N/A
 ## Role Variables
 
 `git_config` is in the syntax:
-```
+
+```yaml
 git_config:
-  setting:
-    - value: value of setting
-    - scope: local/scope/[system]
-    - repo: if scope is local, provide path to repo
+  - name: setting
+    value: value of setting
+    scope: local/scope/system (default)
+    repo: if scope is local, provide path to repo
+  ...
 ```
 
 e.g.
 
-```
+```yaml
 git_config:
-  user.name:
+  - name: user.name
     value: foo
     scope: global
-  user.email:
+  - name: user.email
     value: foo@example.com
     scope: local
     repo: /tmp/gists
@@ -36,7 +38,7 @@ N/A
 
 ## Example Playbook
 
-```
+```yaml
 - hosts: servers
   become: true
   pre_tasks:
