@@ -37,17 +37,16 @@ N/A
 ## Example Playbook
 
 ```
-  - hosts: servers
-
-    pre_tasks:
-      - name: Update apt cache.
-        apt:
-          update_cache: true
-          cache_valid_time: 600
-        changed_when: false
-
-    roles:
-     - role: ansible-git
+- hosts: servers
+  become: true
+  pre_tasks:
+    - name: Update apt cache.
+      apt:
+        update_cache: true
+        cache_valid_time: 600
+      changed_when: false
+  roles:
+   - role: ansible-git
 ```
 
 ## License
