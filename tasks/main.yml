@@ -1,0 +1,28 @@
+---
+# https://git-scm.com/download/linux
+# https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
+
+- name: Install dependencies
+  apt:
+    name:
+      - software-properties-common
+    state: present
+
+- name: Add upstream git apt repository
+  apt_repository:
+    repo: ppa:git-core/ppa
+    state: present
+    update_cache: true
+
+- name: Install git
+  apt:
+    name: git
+    state: present
+
+- name: Set git configuration
+  git_config:
+    name: "{{ item.key }}"
+    scope: "{{ item.value.scope | default('system') }}"
+    value: "{{ item.value.value }}"
+    repo: "{{ item.value.repo | default('') }}"
+  loop: "{{ git_config | dict2items }}"

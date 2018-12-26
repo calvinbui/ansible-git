@@ -1,0 +1,10 @@
+---
+
+git_config:
+  user.name:
+    value: foo
+    scope: global
+  user.email:
+    value: foo@example.com
+    scope: local
+    repo: /tmp/gists
