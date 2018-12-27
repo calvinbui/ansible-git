@@ -7,17 +7,29 @@
     name:
       - software-properties-common
     state: present
+  register: result
+  until: result is success
+  retries: 5
+  delay: 5
 
 - name: Add upstream git apt repository
   apt_repository:
     repo: ppa:git-core/ppa
     state: present
     update_cache: true
+  register: result
+  until: result is success
+  retries: 5
+  delay: 5
 
 - name: Install git
   apt:
     name: git
     state: present
+  register: result
+  until: result is success
+  retries: 5
+  delay: 5
 
 - name: Set git configuration
   git_config:
