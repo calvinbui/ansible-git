@@ -1,13 +1,14 @@
 ---
 galaxy_info:
-  author: Calvin Bui
-  description: Git
+  author: calvinbui
+  description: Git (official upstream) for Ubuntu 18.04 (Bionic)
   company: https://calvin.me
   license: GPLv3
   min_ansible_version: 2.7
   platforms:
     - name: Ubuntu
       versions:
-        - 18.04
-  galaxy_tags: []
+        - bionic
+  galaxy_tags:
+    - git
 dependencies: []
