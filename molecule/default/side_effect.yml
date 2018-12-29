@@ -1,0 +1,11 @@
+---
+
+- name: Side Effect
+  hosts: all
+  become: true
+  tasks:
+    - name: Uninstall git
+      apt:
+        name:
+          - git
+        state: absent
