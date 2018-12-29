@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/calvinbui/ansible-git.svg?branch=master)](https://travis-ci.com/calvinbui/ansible-git)
+
 # Ansible Git
 
 Install the latest upstream Git and configure Git config
