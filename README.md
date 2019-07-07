@@ -1,4 +1,7 @@
 [![Build Status](https://travis-ci.com/calvinbui/ansible-git.svg?branch=master)](https://travis-ci.com/calvinbui/ansible-git)
+![GitHub release](https://img.shields.io/github/release/calvinbui/ansible-git.svg)
+![Ansible Quality Score](https://img.shields.io/ansible/quality/35857.svg)
+![Ansible Role](https://img.shields.io/ansible/role/d/35857.svg)
 
 # Ansible Git
 
